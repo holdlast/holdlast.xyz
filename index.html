@@ -156,6 +156,139 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-KMP算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/19/KMP算法/">KMP算法</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/19/KMP算法/" class="archive-article-date">
+  	<time datetime="2019-09-19T14:11:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="主标题文字"><a href="#主标题文字" class="headerlink" title="主标题文字"></a>主标题文字</h1><ul>
+<li>文本1</li>
+<li>文本2</li>
+</ul>
+<h2 id="副标题文字-二阶标题"><a href="#副标题文字-二阶标题" class="headerlink" title="副标题文字 二阶标题 "></a>副标题文字 二阶标题 </h2><h1 id="插入链接-一级标题"><a href="#插入链接-一级标题" class="headerlink" title="插入链接   一级标题"></a>插入链接   一级标题</h1><p><a href="https://github.com/holdlast" target="_blank" rel="noopener">github网页</a></p>
+<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><blockquote>
+<p>第一种方式</p>
+</blockquote>
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1568913019720&di=a48078cb8ad393d0bdaf609c0555b458&imgtype=0&src=http%3A%2F%2Fi3.article.fd.zol-img.com.cn%2Fg5%2FM00%2F03%2F0A%2FChMkJlawOj2IJzD1AACfg0LTE8QAAINfAKsQG0AAJ-b939.jpg" alt="改变世界"></p>
+<p><img src="E:%5Cblog%5Csource_posts%5Cdrinks-lifestyle-soda-chill-colored.png" alt="本地图片"></p>
+<blockquote>
+<p>第二种方式</p>
+</blockquote>
+<h2 id="插入单行引用"><a href="#插入单行引用" class="headerlink" title="插入单行引用"></a>插入单行引用</h2><blockquote>
+<p>单行引用  看一下效果<br>hello world</p>
+</blockquote>
+<h2 id="分割线测试"><a href="#分割线测试" class="headerlink" title="分割线测试"></a>分割线测试</h2><hr>
+<hr>
+<hr>
+<blockquote>
+<p>有两种  一种是’***’以上  或者是 — 尽量还是用第一个吧</p>
+</blockquote>
+<h2 id="删除线测试"><a href="#删除线测试" class="headerlink" title="删除线测试"></a>删除线测试</h2><p><del>失败</del></p>
+<p>啦啦啦啦啦</p>
+<p>[TOC]  </p>
+<blockquote>
+<p>对上面的[TOC] 做一下解释  这个玩意是将我写的标题以结构的形式  做出一个导航的表</p>
+</blockquote>
+<h2 id="斜体字测试"><a href="#斜体字测试" class="headerlink" title="斜体字测试"></a>斜体字测试</h2><p><em>Hello World!</em><br><em>你好世界</em><br><em>你好世界</em></p>
+<blockquote>
+<p>格式 是 <em>xoxo</em> 或者是 <em>xoxo</em></p>
+</blockquote>
+<h2 id="粗体字测试"><a href="#粗体字测试" class="headerlink" title="粗体字测试"></a>粗体字测试</h2><p><strong>你说啊世界</strong><br><strong>你好啊世界</strong></p>
+<blockquote>
+<p>这里注意一下，要用英文的输入法<br>格式是 * * xoxox * *  或者是 ‘<em>_ xoxo __’ 两边分别是两个</em>(英文啊！) </p>
+</blockquote>
+<h2 id="邮箱测试"><a href="#邮箱测试" class="headerlink" title="邮箱测试"></a>邮箱测试</h2><p><a href="mailto:&#x77;&#97;&#x6e;&#103;&#104;&#x73;&#117;&#x6f;&#97;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#x77;&#97;&#x6e;&#103;&#104;&#x73;&#117;&#x6f;&#97;&#x40;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<blockquote>
+<p>格式是 &lt;邮箱名字&gt;</p>
+</blockquote>
+<h2 id="代码块展示"><a href="#代码块展示" class="headerlink" title="代码块展示"></a>代码块展示</h2><h5 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h5><blockquote>
+<p>C++ 代码展示</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//标准 next模板</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">kmp_next</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">-1</span>;</span><br><span class="line">    nextt[<span class="number">0</span>]=<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;len)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(j==<span class="number">-1</span>||a[i]==a[j])</span><br><span class="line">        &#123;</span><br><span class="line">            nextt[++i]=++j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">           j=nextt[j]; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>java代码展示</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">node</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"123"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="脚注测试"><a href="#脚注测试" class="headerlink" title="脚注测试"></a>脚注测试</h5><p>十一[^ 我是一个脚注]</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubbish</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">简单记忆</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">随时删除</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/19/KMP算法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -431,6 +564,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">rubbish</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">简单记忆</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">随时删除</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
