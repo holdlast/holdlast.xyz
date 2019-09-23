@@ -6,27 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>slade6466 | MyBlog</title>
+  <title>线性表初探 | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="图片">
-<meta name="keywords" content="rubbish">
+  <meta name="description" content="线性表的简单操作">
+<meta name="keywords" content="C++,数据结构,DateStruct">
 <meta property="og:type" content="article">
-<meta property="og:title" content="slade6466">
-<meta property="og:url" content="http://yoursite.com/2019/09/22/salde6466/index.html">
+<meta property="og:title" content="线性表初探">
+<meta property="og:url" content="http://yoursite.com/2019/09/23/线性表初探/index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="图片">
+<meta property="og:description" content="线性表的简单操作">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://hbimg.huabanimg.com/3bdb578f59ec62b5d142f396bd94a588acbad909a5966-EFlpCa_fw658">
-<meta property="og:image" content="https://hbimg.huabanimg.com/56875086d41f75bf83ccda299f96dbc2d95d86cce68d-riT4XG_fw658">
-<meta property="og:image" content="https://hbimg.huabanimg.com/629cc1ce6facdea44f04edaaa4a7c2f0b47c49c0affab-JwSNH2_fw658">
-<meta property="og:image" content="https://hbimg.huabanimg.com/d064019640ee4742bb072b9c8f99a550c0790e7676ce-rGL1K5_fw658">
-<meta property="og:image" content="https://hbimg.huabanimg.com/af7545c628d1db036528a6d2dcc0a8d33f3c81b42f32c-NUx0MH_fw658">
-<meta property="og:image" content="https://hbimg.huabanimg.com/0173a5b3b8f2863716db0dc24b3e3b3da22dbfba33404-Blin8I_fw658">
-<meta property="og:updated_time" content="2019-09-22T12:27:04.712Z">
+<meta property="og:image" content="https://i.loli.net/2019/09/24/REPTs4FXGD1ApjW.jpg">
+<meta property="og:updated_time" content="2019-09-23T16:17:16.120Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="slade6466">
-<meta name="twitter:description" content="图片">
-<meta name="twitter:image" content="https://hbimg.huabanimg.com/3bdb578f59ec62b5d142f396bd94a588acbad909a5966-EFlpCa_fw658">
+<meta name="twitter:title" content="线性表初探">
+<meta name="twitter:description" content="线性表的简单操作">
+<meta name="twitter:image" content="https://i.loli.net/2019/09/24/REPTs4FXGD1ApjW.jpg">
   
   
     <link rel="icon" href="/favicon.png">
@@ -156,39 +151,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-salde6466" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-线性表初探" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      slade6466
+      线性表初探
     </h1>
   
 
         
-        <a href="/2019/09/22/salde6466/" class="archive-article-date">
-  	<time datetime="2019-09-22T12:00:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
+        <a href="/2019/09/23/线性表初探/" class="archive-article-date">
+  	<time datetime="2019-09-23T15:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p><img src="https://hbimg.huabanimg.com/3bdb578f59ec62b5d142f396bd94a588acbad909a5966-EFlpCa_fw658" alt="3"></p>
-<a id="more"></a>
+        <h2 id="线性表的简单操作"><a href="#线性表的简单操作" class="headerlink" title="线性表的简单操作"></a>线性表的简单操作</h2><h2 id><a href="#" class="headerlink" title></a><img src="https://i.loli.net/2019/09/24/REPTs4FXGD1ApjW.jpg" alt="湖雪.jpg"></h2><a id="more"></a>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NOFIND -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INTI_SIZE 100</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> ElemType;</span><br><span class="line"><span class="comment">//#define LISTINCREMENT 10</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType *elem;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="comment">//int listsize;</span></span><br><span class="line">&#125;Sqlist;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InitList_Sq</span><span class="params">(Sqlist &amp;L)</span></span>&#123;</span><br><span class="line">    L.elem = <span class="keyword">new</span> ElemType[LIST_INTI_SIZE];</span><br><span class="line">    <span class="keyword">if</span>(!L.elem) <span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">    L.length = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//L.listsize = LISTINCREMENT;</span></span><br><span class="line">&#125;<span class="comment">//初始化</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">find_element</span><span class="params">(Sqlist &amp;L,ElemType e)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> l=<span class="number">0</span>,r=L.length<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">        <span class="keyword">int</span> mid = (r-l)/<span class="number">2</span> + l;</span><br><span class="line">        <span class="keyword">if</span>(L.elem[mid]&gt;e)&#123;</span><br><span class="line">            r=mid<span class="number">-1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(L.elem[mid]&lt;e)&#123;</span><br><span class="line">            l=mid+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> mid;<span class="comment">//找到了</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NOFIND;<span class="comment">//没找到</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//L.length 记录的是里面存了多少个数 而 L所的数组里面最后一个数的位置即L.elem[0]------L.elem[L.length-1]</span></span><br><span class="line"><span class="function">Status <span class="title">ListInsert_Sq</span><span class="params">(Sqlist &amp;L,ElemType e)</span></span>&#123;<span class="comment">//像一个有序的表里加入一个新的数</span></span><br><span class="line">    <span class="keyword">if</span>(L.length + <span class="number">1</span>&gt;LIST_INTI_SIZE)&#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"Memory Overflow"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(find_element(L,e)==NOFIND)&#123;</span><br><span class="line">            <span class="comment">// begin</span></span><br><span class="line">        <span class="keyword">if</span>(e&lt;L.elem[<span class="number">0</span>])&#123;</span><br><span class="line">            <span class="keyword">int</span> op=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=L.length<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">                L.elem[i+<span class="number">1</span>]=L.elem[i];</span><br><span class="line">            &#125;</span><br><span class="line">            L.elem[<span class="number">0</span>]=e;</span><br><span class="line">            L.length++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//end</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(e&gt;L.elem[L.length<span class="number">-1</span>])&#123;</span><br><span class="line">            L.elem[L.length]=e;</span><br><span class="line">            L.length++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;L.length;i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(L.elem[i]&gt;e)&#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> j=L.length<span class="number">-1</span>;j&gt;=i;j--)&#123;</span><br><span class="line">                        L.elem[j+<span class="number">1</span>]=L.elem[j];</span><br><span class="line">                    &#125;</span><br><span class="line">                    L.elem[i]=e;</span><br><span class="line">                    L.length++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> ERROR;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Sqlist L;</span><br><span class="line">    InitList_Sq(L);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<hr>
-<p><img src="https://hbimg.huabanimg.com/56875086d41f75bf83ccda299f96dbc2d95d86cce68d-riT4XG_fw658" alt="1"></p>
-<hr>
-<p><img src="https://hbimg.huabanimg.com/629cc1ce6facdea44f04edaaa4a7c2f0b47c49c0affab-JwSNH2_fw658" alt="2"></p>
-<hr>
-<p><img src="https://hbimg.huabanimg.com/d064019640ee4742bb072b9c8f99a550c0790e7676ce-rGL1K5_fw658" alt="4"></p>
-<hr>
-<p><img src="https://hbimg.huabanimg.com/af7545c628d1db036528a6d2dcc0a8d33f3c81b42f32c-NUx0MH_fw658" alt="5"></p>
-<hr>
-<p><img src="https://hbimg.huabanimg.com/0173a5b3b8f2863716db0dc24b3e3b3da22dbfba33404-Blin8I_fw658" alt="6"></p>
+<blockquote>
+<p>反思一下:   我是一个眼高手低的人，我自认为是这样 ，数据结构上了4个周了，一直没怎么细看，对于数据结构还是有一点信心的 但是今天自己实现的时候 还是出了问题 也许是最近没怎么Coding吧,代码的质量和速度也是急速的下滑，怎么说囊，最近这几天的要学习的量实在是太多了电路 概率论 线代(<del>突然想起我的错题还没看 艹</del>)，当然数据结构我也是很关注的,因为这让我看到了机器学习的曙光。<br>以前走路闲着没事瞎想也总是突然间冒出了一些新的思路(数据结构) 但是那时候的想也只是去想一想罢了 好的想法没有付诸于实现还是很尴尬的，从长远来看这个问题真的很重要 但我总不能走路走到一半突然Coding (0.0好傻吊的想法…) ，以后想办法协调一下…</p>
+</blockquote>
 
       
 
@@ -223,7 +212,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubbish</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">DateStruct</a>
         		</li>
       		
 		</ul>
@@ -279,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/22/salde6466/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/23/线性表初探/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -322,7 +319,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#图片"><span class="toc-number">1.</span> <span class="toc-text">图片</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#线性表的简单操作"><span class="toc-number">1.</span> <span class="toc-text">线性表的简单操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text"></span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -451,6 +448,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">随时删除</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DateStruct</a>
               </li>
             
             <div class="clearfix"></div>
