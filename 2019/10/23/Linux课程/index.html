@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: rubbish | MyBlog</title>
+  <title>Linux课程 | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MyBlog">
-<meta property="og:url" content="http://yoursite.com/tags/rubbish/index.html">
+  <meta name="description" content="Linuxsda1/2/3 代指硬盘sr0 光驱tmpfs虚拟内存 安装命令RpmApt getPipyumRed hat  里面用rpm Ubuntu 不用Yum 作用与 rpm包 用户管理命令添加一个用户组#useradd tom添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom#useradd -d /home/stu1 mary-d是指定主目录位置">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux课程">
+<meta property="og:url" content="http://yoursite.com/2019/10/23/Linux课程/index.html">
 <meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="Linuxsda1/2/3 代指硬盘sr0 光驱tmpfs虚拟内存 安装命令RpmApt getPipyumRed hat  里面用rpm Ubuntu 不用Yum 作用与 rpm包 用户管理命令添加一个用户组#useradd tom添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom#useradd -d /home/stu1 mary-d是指定主目录位置">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-23T03:50:18.906Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyBlog">
+<meta name="twitter:title" content="Linux课程">
+<meta name="twitter:description" content="Linuxsda1/2/3 代指硬盘sr0 光驱tmpfs虚拟内存 安装命令RpmApt getPipyumRed hat  里面用rpm Ubuntu 不用Yum 作用与 rpm包 用户管理命令添加一个用户组#useradd tom添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom#useradd -d /home/stu1 mary-d是指定主目录位置">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,68 +149,195 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Linux课程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/19/格式test/" class="archive-article-date">
-  	<time datetime="2019-09-19T14:11:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/19/格式test/">格式test</a>
+    <h1 class="article-title" itemprop="name">
+      Linux课程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/23/Linux课程/" class="archive-article-date">
+  	<time datetime="2019-10-23T03:47:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>sda1/2/3 代指硬盘<br>sr0 光驱<br>tmpfs虚拟内存</p>
+<h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><p>Rpm<br>Apt get<br>Pip<br>yum<br>Red hat  里面用rpm Ubuntu 不用<br>Yum 作用与 rpm包</p>
+<h2 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h2><p>添加一个用户组<br>#useradd tom<br>添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom<br>#useradd -d /home/stu1 mary<br>-d是指定主目录位置<br>#useradd -g tom martin<br>新建一个用户 martin 将它加入到 tom组</p>
+<p>#usermod -g g1 tom<br>将tom的用户组名改为g1<br>#usermod -d /home/stu2 tom<br>修改tom的主目录</p>
+<p>#userdel -r tom<br>删除用户<br>#groupadd g3<br>新建一个新的用户组(没有成员)<br>#groupmod -g 606 g3<br>将g3组的号码改为606<br>#groupmod -n g4 g3<br>将g3的组改为g4<br>#groupdel g4<br>删除用户组 g4<br>#groups<br>显示自己的组</p>
+<p>#df<br>显示磁盘的使用情况 查看占用空间<br>#du<br>查看文件所占空间（包含所有空间的统计） 单位 串</p>
+<h2 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h2><p>#ifconfig 网卡参数<br>#interface接口</p>
+<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><p>Set +0 noclobber<br>Ls &gt;&gt; a 命令ls的结果追到a文件之后<br>a|b 管道 接受上一次的输出作为b的输入</p>
+<h2 id="正则："><a href="#正则：" class="headerlink" title="正则："></a>正则：</h2><p>？: 通配一个字符<br>Cc[1-9] 匹配cc后的数字范围 1-9<br>引号<br>单引号 ‘’ 里面的每一个字符均当做普通字符对待<br>双引号 “” 除了$ \ ‘ “之外全按照普通字符来对待<br>反引号 `` （键盘左上角）被他包括起来的全部按照命令来对待<br>别名:<br>Alias<br>简化输入<br>Alias kpl=’cat a’<br>=号前后不能有空格<br>bash将取消别名的操作</p>
+<h2 id="命令历史"><a href="#命令历史" class="headerlink" title="命令历史:"></a>命令历史:</h2><p>History 显示命令历史100 - 1000行 （HISTSIZE = 1000）</p>
+<p>!5<br>执行历史中的第五条</p>
+<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h2 id="Shll变量"><a href="#Shll变量" class="headerlink" title="Shll变量"></a>Shll变量</h2><p>$访问它的变量内容<br>Var=$((1+1))<br>Echo $var<br>显示 3<br>Unset  var<br>清除变量</p>
+<h2 id="位置变量"><a href="#位置变量" class="headerlink" title="位置变量"></a>位置变量</h2><p>$0 存放脚本的名<br>$1-9存放变量<br>shift命令将参数位置左移一个位置<br>Such sh pwd_script 11 12 13(参数存在于$1-9)</p>
+<h2 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量:"></a>特殊变量:</h2><p>…</p>
+<h2 id="脚本输入"><a href="#脚本输入" class="headerlink" title="脚本输入"></a>脚本输入</h2><p>Read var 输入到变量var中</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果!<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubbish</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">简单记忆</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">随时删除</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/23/Linux课程/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/10/20/用栈实现进制转换/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">用栈实现进制转换</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux"><span class="toc-number">1.</span> <span class="toc-text">Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装命令"><span class="toc-number">1.1.</span> <span class="toc-text">安装命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户管理命令"><span class="toc-number">1.2.</span> <span class="toc-text">用户管理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网卡"><span class="toc-number">1.3.</span> <span class="toc-text">网卡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell"><span class="toc-number">1.4.</span> <span class="toc-text">Shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则："><span class="toc-number">1.5.</span> <span class="toc-text">正则：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令历史"><span class="toc-number">1.6.</span> <span class="toc-text">命令历史:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本"><span class="toc-number">1.7.</span> <span class="toc-text">脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shll变量"><span class="toc-number">1.8.</span> <span class="toc-text">Shll变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#位置变量"><span class="toc-number">1.9.</span> <span class="toc-text">位置变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊变量"><span class="toc-number">1.10.</span> <span class="toc-text">特殊变量:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本输入"><span class="toc-number">1.11.</span> <span class="toc-text">脚本输入</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -228,9 +360,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
