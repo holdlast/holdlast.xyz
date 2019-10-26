@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Linux课程 | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linuxsda1/2/3 代指硬盘sr0 光驱tmpfs虚拟内存 安装命令RpmApt getPipyumRed hat  里面用rpm Ubuntu 不用Yum 作用与 rpm包 用户管理命令添加一个用户组#useradd tom添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom#useradd -d /home/stu1 mary-d是指定主目录位置">
+  <meta name="description" content="Linux">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux课程">
 <meta property="og:url" content="http://yoursite.com/2019/10/23/Linux课程/index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="Linuxsda1/2/3 代指硬盘sr0 光驱tmpfs虚拟内存 安装命令RpmApt getPipyumRed hat  里面用rpm Ubuntu 不用Yum 作用与 rpm包 用户管理命令添加一个用户组#useradd tom添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom#useradd -d /home/stu1 mary-d是指定主目录位置">
+<meta property="og:description" content="Linux">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-23T03:50:18.906Z">
+<meta property="og:updated_time" content="2019-10-26T11:17:13.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux课程">
-<meta name="twitter:description" content="Linuxsda1/2/3 代指硬盘sr0 光驱tmpfs虚拟内存 安装命令RpmApt getPipyumRed hat  里面用rpm Ubuntu 不用Yum 作用与 rpm包 用户管理命令添加一个用户组#useradd tom添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom#useradd -d /home/stu1 mary-d是指定主目录位置">
+<meta name="twitter:description" content="Linux">
   
   
     <link rel="icon" href="/favicon.png">
@@ -169,22 +169,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>sda1/2/3 代指硬盘<br>sr0 光驱<br>tmpfs虚拟内存</p>
-<h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><p>Rpm<br>Apt get<br>Pip<br>yum<br>Red hat  里面用rpm Ubuntu 不用<br>Yum 作用与 rpm包</p>
-<h2 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h2><p>添加一个用户组<br>#useradd tom<br>添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom<br>#useradd -d /home/stu1 mary<br>-d是指定主目录位置<br>#useradd -g tom martin<br>新建一个用户 martin 将它加入到 tom组</p>
-<p>#usermod -g g1 tom<br>将tom的用户组名改为g1<br>#usermod -d /home/stu2 tom<br>修改tom的主目录</p>
-<p>#userdel -r tom<br>删除用户<br>#groupadd g3<br>新建一个新的用户组(没有成员)<br>#groupmod -g 606 g3<br>将g3组的号码改为606<br>#groupmod -n g4 g3<br>将g3的组改为g4<br>#groupdel g4<br>删除用户组 g4<br>#groups<br>显示自己的组</p>
-<p>#df<br>显示磁盘的使用情况 查看占用空间<br>#du<br>查看文件所占空间（包含所有空间的统计） 单位 串</p>
-<h2 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h2><p>#ifconfig 网卡参数<br>#interface接口</p>
-<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><p>Set +0 noclobber<br>Ls &gt;&gt; a 命令ls的结果追到a文件之后<br>a|b 管道 接受上一次的输出作为b的输入</p>
-<h2 id="正则："><a href="#正则：" class="headerlink" title="正则："></a>正则：</h2><p>？: 通配一个字符<br>Cc[1-9] 匹配cc后的数字范围 1-9<br>引号<br>单引号 ‘’ 里面的每一个字符均当做普通字符对待<br>双引号 “” 除了$ \ ‘ “之外全按照普通字符来对待<br>反引号 `` （键盘左上角）被他包括起来的全部按照命令来对待<br>别名:<br>Alias<br>简化输入<br>Alias kpl=’cat a’<br>=号前后不能有空格<br>bash将取消别名的操作</p>
-<h2 id="命令历史"><a href="#命令历史" class="headerlink" title="命令历史:"></a>命令历史:</h2><p>History 显示命令历史100 - 1000行 （HISTSIZE = 1000）</p>
-<p>!5<br>执行历史中的第五条</p>
-<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h2 id="Shll变量"><a href="#Shll变量" class="headerlink" title="Shll变量"></a>Shll变量</h2><p>$访问它的变量内容<br>Var=$((1+1))<br>Echo $var<br>显示 3<br>Unset  var<br>清除变量</p>
-<h2 id="位置变量"><a href="#位置变量" class="headerlink" title="位置变量"></a>位置变量</h2><p>$0 存放脚本的名<br>$1-9存放变量<br>shift命令将参数位置左移一个位置<br>Such sh pwd_script 11 12 13(参数存在于$1-9)</p>
+        <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><a id="more"></a>
+<blockquote>
+<p>sda1/2/3 代指硬盘<br>sr0 光驱<br>tmpfs虚拟内存</p>
+</blockquote>
+<h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><blockquote>
+<p>Rpm<br>Apt get<br>Pip<br>yum<br>Red hat  里面用rpm Ubuntu 不用<br>Yum 作用与 rpm包</p>
+</blockquote>
+<h2 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h2><blockquote>
+<p>添加一个用户组<br>#useradd tom<br>添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom<br>#useradd -d /home/stu1 mary<br>-d是指定主目录位置<br>#useradd -g tom martin<br>新建一个用户 martin 将它加入到 tom组<br>#usermod -g g1 tom<br>将tom的用户组名改为g1<br>#usermod -d /home/stu2 tom<br>修改tom的主目录<br>#userdel -r tom<br>删除用户<br>#groupadd g3<br>新建一个新的用户组(没有成员)<br>#groupmod -g 606 g3<br>将g3组的号码改为606<br>#groupmod -n g4 g3<br>将g3的组改为g4<br>#groupdel g4<br>删除用户组 g4<br>#groups<br>显示自己的组<br>#df<br>显示磁盘的使用情况 查看占用空间<br>#du<br>查看文件所占空间（包含所有空间的统计） 单位 串</p>
+</blockquote>
+<h2 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h2><blockquote>
+<p>#ifconfig 网卡参数<br>#interface 接口</p>
+</blockquote>
+<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><blockquote>
+<p>Set +0 noclobber<br>Ls &gt;&gt; a 命令ls的结果追到a文件之后<br>a|b 管道 接受上一次的输出作为b的输入</p>
+</blockquote>
+<h2 id="正则："><a href="#正则：" class="headerlink" title="正则："></a>正则：</h2><blockquote>
+<p>？: 通配一个字符<br>Cc[1-9] 匹配cc后的数字范围 1-9<br>引号<br>单引号 ‘’ 里面的每一个字符均当做普通字符对待<br>双引号 “” 除了$ \ ‘ “之外全按照普通字符来对待<br>反引号 `` （键盘左上角）被他包括起来的全部按照命令来对待<br>别名:<br>Alias<br>简化输入<br>Alias kpl=’cat a’<br>=号前后不能有空格<br>bash将取消别名的操作</p>
+</blockquote>
+<h2 id="命令历史"><a href="#命令历史" class="headerlink" title="命令历史:"></a>命令历史:</h2><blockquote>
+<p>History 显示命令历史100 - 1000行 （HISTSIZE = 1000）<br>!5<br>执行历史中的第五条</p>
+</blockquote>
+<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><p>….</p>
+<h2 id="Shll变量"><a href="#Shll变量" class="headerlink" title="Shll变量"></a>Shll变量</h2><blockquote>
+<p>$访问它的变量内容<br>Var=$((1+1))<br>Echo $var<br>显示 3<br>Unset  var<br>清除变量</p>
+</blockquote>
+<h2 id="位置变量"><a href="#位置变量" class="headerlink" title="位置变量"></a>位置变量</h2><blockquote>
+<p>$0 存放脚本的名<br>$1-9存放变量<br>shift命令将参数位置左移一个位置<br>Such sh pwd_script 11 12 13(参数存在于$1-9)</p>
+</blockquote>
 <h2 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量:"></a>特殊变量:</h2><p>…</p>
-<h2 id="脚本输入"><a href="#脚本输入" class="headerlink" title="脚本输入"></a>脚本输入</h2><p>Read var 输入到变量var中</p>
+<h2 id="脚本输入"><a href="#脚本输入" class="headerlink" title="脚本输入"></a>脚本输入</h2><blockquote>
+<p>Read var 输入到变量var中</p>
+</blockquote>
 
       
 
@@ -442,14 +459,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">链表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">双向链表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">rubbish</a>
               </li>
              
@@ -459,6 +468,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">随时删除</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">双向链表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">DateStruct</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -474,15 +495,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">DateStruct</a>
+                <a href="javascript:void(0)" class="js-tag color1">ASSIC</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DateStructure</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ASSIC</a>
               </li>
             
             <div class="clearfix"></div>
