@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Linux课程 | MyBlog</title>
+  <title>二叉树练习 | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="链式 和 顺序表(数组) 分别实现二叉树">
+<meta name="keywords" content="C++,数据结构,rubbish">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux课程">
-<meta property="og:url" content="http://yoursite.com/2019/10/23/Linux课程/index.html">
+<meta property="og:title" content="二叉树练习">
+<meta property="og:url" content="http://yoursite.com/2019/10/27/二叉树练习/index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="Linux">
+<meta property="og:description" content="链式 和 顺序表(数组) 分别实现二叉树">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-26T11:17:13.055Z">
+<meta property="og:image" content="https://i.loli.net/2019/10/28/D6wR29B5XCPWaSi.png">
+<meta property="og:updated_time" content="2019-10-28T15:34:40.659Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux课程">
-<meta name="twitter:description" content="Linux">
+<meta name="twitter:title" content="二叉树练习">
+<meta name="twitter:description" content="链式 和 顺序表(数组) 分别实现二叉树">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/28/D6wR29B5XCPWaSi.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -149,59 +151,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux课程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-二叉树练习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux课程
+      二叉树练习
     </h1>
   
 
         
-        <a href="/2019/10/23/Linux课程/" class="archive-article-date">
-  	<time datetime="2019-10-23T03:47:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+        <a href="/2019/10/27/二叉树练习/" class="archive-article-date">
+  	<time datetime="2019-10-27T15:06:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><a id="more"></a>
+        <h4 id="链式-和-顺序表-数组-分别实现二叉树"><a href="#链式-和-顺序表-数组-分别实现二叉树" class="headerlink" title="链式 和 顺序表(数组) 分别实现二叉树"></a>链式 和 顺序表(数组) 分别实现二叉树</h4><p><img src="https://i.loli.net/2019/10/28/D6wR29B5XCPWaSi.png" alt="image.png"></p>
+<a id="more"></a>
 <blockquote>
-<p>sda1/2/3 代指硬盘<br>sr0 光驱<br>tmpfs虚拟内存</p>
+<p>小规模的二叉树 可以用顺序表来实现 当然 如果追求鲁棒性更高的话 还是建议链式。</p>
 </blockquote>
-<h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><blockquote>
-<p>Rpm<br>Apt get<br>Pip<br>yum<br>Red hat  里面用rpm Ubuntu 不用<br>Yum 作用与 rpm包</p>
+<h4 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h4><blockquote>
+<p>-+a##*b##-c##d##/e##f##</p>
 </blockquote>
-<h2 id="用户管理命令"><a href="#用户管理命令" class="headerlink" title="用户管理命令"></a>用户管理命令</h2><blockquote>
-<p>添加一个用户组<br>#useradd tom<br>添加一个tom用户(UID) 同时以自己的名字作为一个用户组(GID) /home/tom<br>#useradd -d /home/stu1 mary<br>-d是指定主目录位置<br>#useradd -g tom martin<br>新建一个用户 martin 将它加入到 tom组<br>#usermod -g g1 tom<br>将tom的用户组名改为g1<br>#usermod -d /home/stu2 tom<br>修改tom的主目录<br>#userdel -r tom<br>删除用户<br>#groupadd g3<br>新建一个新的用户组(没有成员)<br>#groupmod -g 606 g3<br>将g3组的号码改为606<br>#groupmod -n g4 g3<br>将g3的组改为g4<br>#groupdel g4<br>删除用户组 g4<br>#groups<br>显示自己的组<br>#df<br>显示磁盘的使用情况 查看占用空间<br>#du<br>查看文件所占空间（包含所有空间的统计） 单位 串</p>
-</blockquote>
-<h2 id="网卡"><a href="#网卡" class="headerlink" title="网卡"></a>网卡</h2><blockquote>
-<p>#ifconfig 网卡参数<br>#interface 接口</p>
-</blockquote>
-<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><blockquote>
-<p>Set +0 noclobber<br>Ls &gt;&gt; a 命令ls的结果追到a文件之后<br>a|b 管道 接受上一次的输出作为b的输入</p>
-</blockquote>
-<h2 id="正则："><a href="#正则：" class="headerlink" title="正则："></a>正则：</h2><blockquote>
-<p>？: 通配一个字符<br>Cc[1-9] 匹配cc后的数字范围 1-9<br>引号<br>单引号 ‘’ 里面的每一个字符均当做普通字符对待<br>双引号 “” 除了$ \ ‘ “之外全按照普通字符来对待<br>反引号 `` （键盘左上角）被他包括起来的全部按照命令来对待<br>别名:<br>Alias<br>简化输入<br>Alias kpl=’cat a’<br>=号前后不能有空格<br>bash将取消别名的操作</p>
-</blockquote>
-<h2 id="命令历史"><a href="#命令历史" class="headerlink" title="命令历史:"></a>命令历史:</h2><blockquote>
-<p>History 显示命令历史100 - 1000行 （HISTSIZE = 1000）<br>!5<br>执行历史中的第五条</p>
-</blockquote>
-<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><p>….</p>
-<h2 id="Shll变量"><a href="#Shll变量" class="headerlink" title="Shll变量"></a>Shll变量</h2><blockquote>
-<p>$访问它的变量内容<br>Var=$((1+1))<br>Echo $var<br>显示 3<br>Unset  var<br>清除变量</p>
-</blockquote>
-<h2 id="位置变量"><a href="#位置变量" class="headerlink" title="位置变量"></a>位置变量</h2><blockquote>
-<p>$0 存放脚本的名<br>$1-9存放变量<br>shift命令将参数位置左移一个位置<br>Such sh pwd_script 11 12 13(参数存在于$1-9)</p>
-</blockquote>
-<h2 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量:"></a>特殊变量:</h2><p>…</p>
-<h2 id="脚本输入"><a href="#脚本输入" class="headerlink" title="脚本输入"></a>脚本输入</h2><blockquote>
-<p>Read var 输入到变量var中</p>
-</blockquote>
+<h6 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> Status char</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 1000<span class="comment">//尽可能地大 防止溢出</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> Order[MAX_SIZE];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Init_Tree</span><span class="params">(Order T)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i= <span class="number">0</span>; i&lt;MAX_SIZE;i++)&#123;</span><br><span class="line">		T[i] = <span class="string">'\0'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreatTree_Order</span><span class="params">(Order T,<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	ch = getchar();</span><br><span class="line">	<span class="keyword">if</span>(ch ==<span class="string">'#'</span>)</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">	T[i]=ch;</span><br><span class="line">	CreatTree_Order(T,<span class="number">2</span>*i);</span><br><span class="line">	CreatTree_Order(T,<span class="number">2</span>*i+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Show_Order_Pre</span><span class="params">(Order T,<span class="keyword">int</span> ans)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T[ans]==<span class="string">'\0'</span>) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		Show_Order_Pre(T,<span class="number">2</span>*ans);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;T[ans]&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//中序遍历 改变位置就可以 后序 先序</span></span><br><span class="line">		Show_Order_Pre(T,<span class="number">2</span>*ans+<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>&#123;</span></span><br><span class="line">	Status date;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> *<span class="title">lchild</span>,*<span class="title">rchild</span>;</span></span><br><span class="line">&#125;TreeNode,*TreeNodes; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CreatTree</span><span class="params">(TreeNodes &amp;T)</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">	<span class="keyword">if</span>(ch==<span class="string">'#'</span>)&#123;</span><br><span class="line">		T=<span class="literal">NULL</span>; <span class="comment">//</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		T = <span class="keyword">new</span> TreeNode();</span><br><span class="line">		T-&gt;date = ch;</span><br><span class="line">		CreatTree(T-&gt;lchild);</span><br><span class="line">		CreatTree(T-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Preshow</span><span class="params">(TreeNodes T)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T!=<span class="literal">NULL</span>)&#123;	</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;T-&gt;date&lt;&lt;<span class="string">"  "</span>;</span><br><span class="line">		Preshow(T-&gt;lchild);</span><br><span class="line">		Preshow(T-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//cout&lt;&lt;endl;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Midshow</span><span class="params">(TreeNodes T)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T!=<span class="literal">NULL</span>)&#123;	</span><br><span class="line">		Midshow(T-&gt;lchild);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;T-&gt;date&lt;&lt;<span class="string">"  "</span>;</span><br><span class="line">		Midshow(T-&gt;rchild);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//cout&lt;&lt;endl;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Reshow</span><span class="params">(TreeNodes T)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T!=<span class="literal">NULL</span>)&#123;	</span><br><span class="line">		Reshow(T-&gt;lchild);</span><br><span class="line">		Reshow(T-&gt;rchild);</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;T-&gt;date&lt;&lt;<span class="string">"  "</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Depth</span><span class="params">(TreeNodes T)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> n=<span class="number">0</span>,m=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span>(T!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">			m=Depth(T-&gt;lchild);</span><br><span class="line">			n=Depth(T-&gt;rchild);</span><br><span class="line">			<span class="keyword">if</span>(m&gt;n) <span class="keyword">return</span> m+<span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">return</span> n+<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="comment">/*Order T;</span></span><br><span class="line"><span class="comment">	Init_Tree(T);</span></span><br><span class="line"><span class="comment">	CreatTree_Order(T,1);</span></span><br><span class="line"><span class="comment">	Show_Order_Pre(T,1);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">    <span class="comment">/*TreeNode *T = new TreeNode();</span></span><br><span class="line"><span class="comment">	CreatTree(T);</span></span><br><span class="line"><span class="comment">	cout&lt;&lt;"前序遍历"&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">	Preshow(T);</span></span><br><span class="line"><span class="comment">	cout&lt;&lt;"\n"&lt;&lt;"中序遍历"&lt;&lt;endl; </span></span><br><span class="line"><span class="comment">	Midshow(T);</span></span><br><span class="line"><span class="comment">	cout&lt;&lt;"\n"&lt;&lt;"后序遍历"&lt;&lt;endl; </span></span><br><span class="line"><span class="comment">	Reshow(T);</span></span><br><span class="line"><span class="comment">	//Preshow(T);</span></span><br><span class="line"><span class="comment">	cout&lt;&lt;"\n"&lt;&lt;"深度:"&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">	cout&lt;&lt;Depth(T)&lt;&lt;endl;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -236,7 +215,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubbish</a>
         		</li>
       		
 		</ul>
@@ -292,7 +279,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/23/Linux课程/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/27/二叉树练习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -306,18 +293,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/27/二叉树练习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          二叉树练习
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/20/用栈实现进制转换/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">用栈实现进制转换</div>
+    <a href="/2019/10/23/Linux课程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux课程</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -344,7 +322,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux"><span class="toc-number">1.</span> <span class="toc-text">Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装命令"><span class="toc-number">1.1.</span> <span class="toc-text">安装命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#用户管理命令"><span class="toc-number">1.2.</span> <span class="toc-text">用户管理命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网卡"><span class="toc-number">1.3.</span> <span class="toc-text">网卡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell"><span class="toc-number">1.4.</span> <span class="toc-text">Shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则："><span class="toc-number">1.5.</span> <span class="toc-text">正则：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令历史"><span class="toc-number">1.6.</span> <span class="toc-text">命令历史:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本"><span class="toc-number">1.7.</span> <span class="toc-text">脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shll变量"><span class="toc-number">1.8.</span> <span class="toc-text">Shll变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#位置变量"><span class="toc-number">1.9.</span> <span class="toc-text">位置变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#特殊变量"><span class="toc-number">1.10.</span> <span class="toc-text">特殊变量:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本输入"><span class="toc-number">1.11.</span> <span class="toc-text">脚本输入</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#链式-和-顺序表-数组-分别实现二叉树"><span class="toc-number">1.</span> <span class="toc-text">链式 和 顺序表(数组) 分别实现二叉树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#测试数据"><span class="toc-number">2.</span> <span class="toc-text">测试数据</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#代码"><span class="toc-number">2.0.1.</span> <span class="toc-text">代码:</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
