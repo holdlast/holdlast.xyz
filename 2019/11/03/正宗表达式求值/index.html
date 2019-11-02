@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MyBlog</title>
+  <title>正宗表达式求值 | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MyBlog">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="待填坑 明天继续..">
+<meta name="keywords" content="数据结构,C++,可改进,未完 待填坑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正宗表达式求值">
+<meta property="og:url" content="http://yoursite.com/2019/11/03/正宗表达式求值/index.html">
 <meta property="og:site_name" content="MyBlog">
+<meta property="og:description" content="待填坑 明天继续..">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-02T17:04:46.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyBlog">
+<meta name="twitter:title" content="正宗表达式求值">
+<meta name="twitter:description" content="待填坑 明天继续..">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,35 +149,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-KMP算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-正宗表达式求值" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/20/KMP算法/">KMP算法</a>
+    <h1 class="article-title" itemprop="name">
+      正宗表达式求值
     </h1>
   
 
         
-        <a href="/2019/09/20/KMP算法/" class="archive-article-date">
-  	<time datetime="2019-09-20T13:32:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
+        <a href="/2019/11/03/正宗表达式求值/" class="archive-article-date">
+  	<time datetime="2019-11-02T16:56:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="KMP笔记"><a href="#KMP笔记" class="headerlink" title="KMP笔记"></a>KMP笔记</h1><h2 id><a href="#" class="headerlink" title></a><img src="https://i.loli.net/2019/09/21/XJzP6yhBK9cnFRG.jpg" alt="timg.jpg"></h2><ul>
-<li><p>首先说明一下什么叫KMP算法–就是一种字符串的高效匹配算法,一下是一段水分极高的废话:scream:</p>
-        
-          <a class="article-more-a" href="/2019/09/20/KMP算法/#more">more >></a>
-        
+        <h2 id="待填坑-明天继续"><a href="#待填坑-明天继续" class="headerlink" title="待填坑 明天继续.."></a>待填坑 明天继续..</h2><a id="more"></a>
+<h5 id="第一天-可改进的地方"><a href="#第一天-可改进的地方" class="headerlink" title="第一天:可改进的地方.."></a><code>第一天:可改进的地方..</code></h5><blockquote>
+<p>可以将栈及其节点抽象 写成一个模板类<br>这样可以使得后面再该动的时候不需要大量修改代码</p>
+</blockquote>
+<p><code>当然 这里说一下 既然是数据结构 那么就一定是为了数据的存储大小 读取速度等性能服务,那么就一定是追求者高性能 这里用类(class)来写链表 栈 是为了为后面的模板类的使用打基础...</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span>  <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BiTree</span>&#123;</span>	</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="keyword">char</span> value;</span><br><span class="line">		BiTree *lchild;</span><br><span class="line">		BiTree *rchild;</span><br><span class="line">		BiTree();</span><br><span class="line">		BiTree(<span class="keyword">char</span> date);</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">set_BiTree</span><span class="params">(BiTree T,BiTree *l,BiTree *r,<span class="keyword">char</span> value)</span></span>;</span><br><span class="line">		</span><br><span class="line">	</span><br><span class="line">&#125;; </span><br><span class="line"><span class="keyword">void</span> BiTree::set_BiTree(BiTree T,BiTree *l,BiTree *r,<span class="keyword">char</span> value)&#123;</span><br><span class="line">	T.lchild = l;</span><br><span class="line">	T.rchild = r;</span><br><span class="line">	T.value = value;</span><br><span class="line">&#125;;</span><br><span class="line">BiTree::BiTree(<span class="keyword">char</span> date)&#123;</span><br><span class="line">	<span class="keyword">this</span>-&gt;value = date;</span><br><span class="line">	<span class="keyword">this</span>-&gt;lchild = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="keyword">this</span>-&gt;rchild = <span class="literal">NULL</span>;</span><br><span class="line">&#125;;</span><br><span class="line">BiTree::BiTree()&#123;</span><br><span class="line">	lchild = <span class="literal">NULL</span>;</span><br><span class="line">	rchild = <span class="literal">NULL</span>;</span><br><span class="line">	value = <span class="string">'\0'</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">public</span>:	</span><br><span class="line">		BiTree  date;</span><br><span class="line">		node *next;</span><br><span class="line">	node()&#123;</span><br><span class="line">		BiTree p;</span><br><span class="line">		<span class="keyword">this</span>-&gt;date = p;</span><br><span class="line">		<span class="keyword">this</span>-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">	&#125;;</span><br><span class="line">	node(BiTree value)&#123;</span><br><span class="line">		<span class="keyword">this</span>-&gt;date=value;</span><br><span class="line">		<span class="keyword">this</span>-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="function"><span class="keyword">char</span> <span class="title">FeedBack</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>-&gt;date.value;</span><br><span class="line">	&#125;<span class="comment">// 返回的是字符</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">stack</span>&#123;</span></span><br><span class="line">	<span class="keyword">private</span>:</span><br><span class="line">		node *head;</span><br><span class="line">	<span class="keyword">public</span>:</span><br><span class="line">		<span class="built_in">stack</span>(node *p)&#123;</span><br><span class="line">			<span class="keyword">this</span>-&gt;head=p;</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="built_in">stack</span>()&#123;</span><br><span class="line">			<span class="keyword">this</span>-&gt;head=<span class="keyword">new</span> node();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(BiTree value)</span></span>;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">		<span class="function"><span class="keyword">bool</span> <span class="title">emptys</span><span class="params">(node *p)</span></span>;</span><br><span class="line">		<span class="function"><span class="keyword">char</span> <span class="title">front</span><span class="params">()</span></span>;</span><br><span class="line">		<span class="function"><span class="keyword">void</span> <span class="title">pop</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">void</span> <span class="built_in">stack</span>::push(BiTree value)&#123;</span><br><span class="line">	node *p = <span class="keyword">new</span> node();</span><br><span class="line">	p-&gt;date=value;</span><br><span class="line">	p-&gt;next=head-&gt;next;</span><br><span class="line">	head-&gt;next=p;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> <span class="built_in">stack</span>::show()&#123;</span><br><span class="line">	node *p = <span class="keyword">new</span> node();</span><br><span class="line">	p = head;</span><br><span class="line">	<span class="comment">// kong ?</span></span><br><span class="line">	<span class="keyword">while</span>(emptys(p))&#123;</span><br><span class="line">		p=p-&gt;next;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;p-&gt;FeedBack()&lt;&lt;<span class="string">"   "</span>;<span class="comment">// 重复..</span></span><br><span class="line">	&#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">bool</span> <span class="built_in">stack</span>::emptys(node *p)&#123;</span><br><span class="line">	<span class="keyword">if</span>(p-&gt;next!=<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;	</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> <span class="built_in">stack</span>::front()&#123;</span><br><span class="line">	node *p = <span class="keyword">new</span> node();</span><br><span class="line">	p = head;</span><br><span class="line">	<span class="keyword">if</span>(emptys(p))&#123;</span><br><span class="line">		<span class="keyword">return</span> head-&gt;next-&gt;FeedBack();</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"Empty"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//判断ch是否为运算符</span></span><br><span class="line"><span class="keyword">void</span> <span class="built_in">stack</span>::pop()&#123;</span><br><span class="line">	<span class="keyword">if</span>(emptys(head))&#123;</span><br><span class="line">		node *p =<span class="keyword">new</span> node();</span><br><span class="line">		p = head-&gt;next;</span><br><span class="line">		head-&gt;next=p-&gt;next;</span><br><span class="line">		<span class="built_in">free</span>(p);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">"Empty"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">C_Judge</span><span class="params">(<span class="keyword">char</span> ch)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (ch)&#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'+'</span> :</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'-'</span> :</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'*'</span> :</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'/'</span> :</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'('</span> :</span><br><span class="line">        <span class="keyword">case</span> <span class="string">')'</span> :</span><br><span class="line">        <span class="keyword">case</span> <span class="string">'#'</span> : <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">default</span> : <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">char</span> <span class="title">Precede</span><span class="params">(<span class="keyword">char</span> ch, <span class="keyword">char</span> c)</span> <span class="comment">//ch是栈顶字符,c 是表达式字符</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (ch)</span><br><span class="line">    &#123;</span><br><span class="line">             <span class="keyword">case</span> <span class="string">'+'</span> :</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'*'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'('</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">')'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'#'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">             <span class="keyword">case</span> <span class="string">'-'</span> :</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'*'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'('</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">')'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'#'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">         <span class="keyword">case</span> <span class="string">'*'</span> :</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'*'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'('</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">')'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'#'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'/'</span> :</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'*'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'('</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">')'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'#'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">             <span class="keyword">case</span> <span class="string">'('</span> :</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'*'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'('</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">')'</span>) <span class="keyword">return</span> <span class="string">'='</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'#'</span>) <span class="keyword">return</span> <span class="string">' '</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">')'</span> :</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'*'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'('</span>) <span class="keyword">return</span> <span class="string">' '</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">')'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'#'</span>) <span class="keyword">return</span> <span class="string">'&gt;'</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">'#'</span> :</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">'+'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'-'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'*'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'/'</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'('</span>) <span class="keyword">return</span> <span class="string">'&lt;'</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">')'</span>) <span class="keyword">return</span> <span class="string">' '</span>;</span><br><span class="line">                <span class="keyword">if</span> (c == <span class="string">'#'</span>) <span class="keyword">return</span> <span class="string">'='</span>;</span><br><span class="line">            <span class="keyword">default</span> :</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'$'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitExpTree</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> ch;</span><br><span class="line">	<span class="built_in">stack</span> EXPT;  <span class="comment">// 数字栈</span></span><br><span class="line">	<span class="built_in">stack</span> OPTR; <span class="comment">//符号栈</span></span><br><span class="line">	OPTR.push(<span class="string">'#'</span>);</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;ch;</span><br><span class="line">	<span class="keyword">while</span>(ch!=<span class="string">'#'</span>||OPTR.front()!=<span class="string">'#'</span>)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!C_Judge(ch))&#123;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">stack</span> op;</span><br><span class="line">	<span class="function">BiTree <span class="title">value</span><span class="params">(<span class="string">'1'</span>)</span></span>;</span><br><span class="line">	op.push(value);</span><br><span class="line">	op.show();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果!<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -189,91 +216,13 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/20/KMP算法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-格式test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/19/格式test/">格式test</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/19/格式test/" class="archive-article-date">
-  	<time datetime="2019-09-19T14:11:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="主标题文字"><a href="#主标题文字" class="headerlink" title="主标题文字"></a>主标题文字</h1><ul>
-<li>文本1</li>
-<li>文本2
-        
-          <a class="article-more-a" href="/2019/09/19/格式test/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubbish</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">可改进</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">简单记忆</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">随时删除</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">未完 待填坑</a>
         		</li>
       		
 		</ul>
@@ -282,16 +231,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/19/格式test/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/03/正宗表达式求值/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/27/二叉树练习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉树练习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -306,83 +314,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/19/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-19T10:45:47.617Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-        
-          <a class="article-more-a" href="/2019/09/19/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/19/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#待填坑-明天继续"><span class="toc-number">1.</span> <span class="toc-text">待填坑 明天继续..</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#第一天-可改进的地方"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">第一天:可改进的地方..</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+
   
 
 
@@ -405,8 +362,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
