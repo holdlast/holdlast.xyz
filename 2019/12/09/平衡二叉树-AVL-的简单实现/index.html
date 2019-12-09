@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | MyBlog</title>
+  <title>平衡二叉树(AVL)的简单实现... | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MyBlog">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="keywords" content="C++,数据结构,二叉树,AVL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="平衡二叉树(AVL)的简单实现...">
+<meta property="og:url" content="http://yoursite.com/2019/12/09/平衡二叉树-AVL-的简单实现/index.html">
 <meta property="og:site_name" content="MyBlog">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2019/12/09/57AxU4r1DfumgtG.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/09/esKQwTji1Norgd6.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/09/jRhwZ47laiYzfEM.png">
+<meta property="og:image" content="https://i.loli.net/2019/12/09/pqCMnclxbDN3ihA.png">
+<meta property="og:updated_time" content="2019-12-09T05:11:40.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyBlog">
+<meta name="twitter:title" content="平衡二叉树(AVL)的简单实现...">
+<meta name="twitter:image" content="https://i.loli.net/2019/12/09/57AxU4r1DfumgtG.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,36 +151,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-平衡二叉树-AVL-的简单实现" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      平衡二叉树(AVL)的简单实现...
+    </h1>
+  
+
+        
+        <a href="/2019/12/09/平衡二叉树-AVL-的简单实现/" class="archive-article-date">
+  	<time datetime="2019-12-09T05:02:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-09</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<a id="more"></a>
+<h2 id="AVL源码"><a href="#AVL源码" class="headerlink" title="AVL源码"></a>AVL源码</h2><blockquote>
+<p>图象理解</p>
+</blockquote>
+<h5 id="LL型"><a href="#LL型" class="headerlink" title="LL型"></a>LL型</h5><p><img src="https://i.loli.net/2019/12/09/57AxU4r1DfumgtG.png" alt="20150818221513880.png"></p>
+<h5 id="RR型"><a href="#RR型" class="headerlink" title="RR型"></a>RR型</h5><p><img src="https://i.loli.net/2019/12/09/esKQwTji1Norgd6.png" alt="20150818220942825.png"></p>
+<h5 id="LR型"><a href="#LR型" class="headerlink" title="LR型"></a>LR型</h5><p><img src="https://i.loli.net/2019/12/09/jRhwZ47laiYzfEM.png" alt="20150818224419149.png"></p>
+<h5 id="RL型"><a href="#RL型" class="headerlink" title="RL型"></a>RL型</h5><p><img src="https://i.loli.net/2019/12/09/pqCMnclxbDN3ihA.png" alt="20150818230041580.png"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * txt文件读写 </span></span><br><span class="line"><span class="comment"> * 要求编码格式为ANSI</span></span><br><span class="line"><span class="comment"> * 本次 读入行数 80 行</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> llint long long int </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">stuclass</span>&#123;</span></span><br><span class="line">    <span class="built_in">string</span> name,sex,pclass;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    llint key;</span><br><span class="line">    stuclass stu;</span><br><span class="line">    node *lchild,*rchild;</span><br><span class="line">    <span class="keyword">int</span> height;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (a&gt;b)?a:b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">height</span><span class="params">(node *N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(N == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> N-&gt;height;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">string</span> Blank =<span class="string">"NULL"</span>;</span><br><span class="line"><span class="function">node *<span class="title">NewNode</span><span class="params">(<span class="keyword">int</span> key,stuclass p)</span></span>&#123;</span><br><span class="line">    node *N = <span class="keyword">new</span> node();</span><br><span class="line">    N-&gt;key = key;</span><br><span class="line">    N-&gt;lchild = <span class="literal">NULL</span>;</span><br><span class="line">    N-&gt;rchild = <span class="literal">NULL</span>;</span><br><span class="line">    N-&gt;height = <span class="number">1</span>;</span><br><span class="line">    N-&gt;stu.name = p.name;</span><br><span class="line">    N-&gt;stu.sex = p.sex;</span><br><span class="line">    N-&gt;stu.pclass = p.pclass;</span><br><span class="line">    <span class="keyword">return</span> (N);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">node *<span class="title">ll_rotate</span><span class="params">(node *y)</span></span>&#123;</span><br><span class="line">    node *x = y-&gt;lchild;</span><br><span class="line">    y-&gt;lchild = x-&gt;rchild;</span><br><span class="line">    x-&gt;rchild = y;</span><br><span class="line"></span><br><span class="line">    y-&gt;height = max(height(y-&gt;lchild),height(y-&gt;rchild))+<span class="number">1</span>;</span><br><span class="line">    x-&gt;height = max(height(x-&gt;lchild),height(x-&gt;rchild))+<span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (x);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">node *<span class="title">rr_rotate</span><span class="params">(node *y)</span></span>&#123;</span><br><span class="line">    node *x = y-&gt;rchild;</span><br><span class="line">    y-&gt;rchild = x-&gt;lchild;</span><br><span class="line">    x-&gt;lchild = y;</span><br><span class="line"></span><br><span class="line">    y-&gt;height = max(height(y-&gt;lchild),height(y-&gt;rchild))+<span class="number">1</span>;</span><br><span class="line">    x-&gt;height = max(height(x-&gt;lchild),height(x-&gt;rchild))+<span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> (x);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">node *<span class="title">rl_rotate</span><span class="params">(node *y)</span></span>&#123;</span><br><span class="line">    node *x = y-&gt;rchild;</span><br><span class="line">    y-&gt;rchild = ll_rotate(x);</span><br><span class="line">    <span class="keyword">return</span> rr_rotate(y);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">node *<span class="title">lr_rotate</span><span class="params">(node *y)</span></span>&#123;</span><br><span class="line">    node *x = y-&gt;lchild;</span><br><span class="line">    y-&gt;lchild = rr_rotate(x);</span><br><span class="line">    <span class="keyword">return</span> ll_rotate(y);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Node_Balance</span><span class="params">(node *N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(N == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> (height(N-&gt;lchild)-height(N-&gt;rchild));</span><br><span class="line">    <span class="comment">//这里是左面减去右面 注意如果正 就是左面 否则亦然..</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">node *<span class="title">insert</span><span class="params">(node *N,<span class="keyword">int</span> key,stuclass ans)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(N == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> NewNode(key,ans);</span><br><span class="line">    <span class="comment">// 空节点（删除后或者是刚开始的时候）</span></span><br><span class="line">    <span class="keyword">if</span>(key&lt;N-&gt;key)</span><br><span class="line">        N-&gt;lchild = insert(N-&gt;lchild,key,ans);<span class="comment">// 小 在左子树递归添加</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(key&gt;N-&gt;key)</span><br><span class="line">        N-&gt;rchild = insert(N-&gt;rchild,key,ans);<span class="comment">// 大 在右子树递归添加</span></span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 相同的返回不添加</span></span><br><span class="line"><span class="comment">     * 查找重复单元</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//别忘了！整理height值</span></span><br><span class="line"></span><br><span class="line">    N-&gt;height = max(height(N-&gt;lchild),height(N-&gt;rchild))+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> balance = Node_Balance(N);</span><br><span class="line">    <span class="comment">//判断类型</span></span><br><span class="line">    <span class="keyword">if</span>(balance&gt;<span class="number">1</span>&amp;&amp;key&lt;N-&gt;lchild-&gt;key)</span><br><span class="line">        <span class="keyword">return</span> ll_rotate(N);</span><br><span class="line">    <span class="keyword">if</span>(balance&lt;<span class="number">-1</span>&amp;&amp;key&gt;N-&gt;rchild-&gt;key)</span><br><span class="line">        <span class="keyword">return</span> rr_rotate(N);</span><br><span class="line">    <span class="keyword">if</span>(balance&gt;<span class="number">1</span>&amp;&amp;key&gt;N-&gt;lchild-&gt;key)</span><br><span class="line">        <span class="keyword">return</span> lr_rotate(N);</span><br><span class="line">    <span class="keyword">if</span>(balance&lt;<span class="number">-1</span>&amp;&amp;key&lt;N-&gt;rchild-&gt;key)</span><br><span class="line">        <span class="keyword">return</span> rl_rotate(N);</span><br><span class="line">    <span class="keyword">return</span> N;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">preOrder</span><span class="params">(node *N)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(N!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,N-&gt;key);</span><br><span class="line">        preOrder(N-&gt;lchild);</span><br><span class="line">        preOrder(N-&gt;rchild);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回某一子树上的最小值</span></span><br><span class="line"><span class="function">node *<span class="title">minvalue</span><span class="params">(node *N)</span></span>&#123;</span><br><span class="line">    node *p = N;</span><br><span class="line">    <span class="keyword">while</span>(p-&gt;lchild!=<span class="literal">NULL</span>)</span><br><span class="line">        p = p-&gt;lchild;</span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">node *<span class="title">DeleteNode</span><span class="params">(node *N,<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(N == <span class="literal">NULL</span>) </span><br><span class="line">        <span class="keyword">return</span> N;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; N-&gt;key)</span><br><span class="line">        N-&gt;lchild = DeleteNode(N-&gt;lchild,key);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(key&gt;N-&gt;key)</span><br><span class="line">        N-&gt;rchild = DeleteNode(N-&gt;rchild,key);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 两个相等 找到了位置了 节点是 *N</span></span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>((N-&gt;lchild == <span class="literal">NULL</span>) || (N-&gt;rchild == <span class="literal">NULL</span>))&#123;</span><br><span class="line">            node *p = N-&gt;lchild ? N-&gt;lchild : N-&gt;rchild;<span class="comment">//寻找着两个钟的非空节点</span></span><br><span class="line">            <span class="keyword">if</span>(p == <span class="literal">NULL</span>)&#123;</span><br><span class="line">                p = N;</span><br><span class="line">                N = <span class="literal">NULL</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 如果有一个 那么就直接取代他原来的位置（是直接取代）</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                N = p;</span><br><span class="line">            <span class="built_in">free</span>(p);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 被删除的节点两边都是费控的节点 思路是 寻找右子树上的最小的节点的值添加到要删除的节点的key中（暂时的为了维系平衡二叉树） 之后再递归删除右子树上用到的节点</span></span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            node *p = minvalue(N-&gt;rchild);</span><br><span class="line">            N-&gt;key = p-&gt;key;</span><br><span class="line">            N-&gt;rchild = DeleteNode(N-&gt;rchild,p-&gt;key);<span class="comment">// 这里就需要本函数逇返回值了 虽然在主函数里面有可能用不到</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(N == <span class="literal">NULL</span>) <span class="keyword">return</span> N;</span><br><span class="line">    <span class="comment">//如果是这样就没必要更新 height值 也就不用计算BF了</span></span><br><span class="line">    N-&gt;height = max(height(N-&gt;lchild),height(N-&gt;rchild))+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> balance = Node_Balance(N);</span><br><span class="line">    <span class="keyword">if</span>(balance&gt;<span class="number">1</span>&amp;&amp;Node_Balance(N-&gt;lchild)&gt;=<span class="number">0</span>)<span class="comment">// LL =0夹杂其中 当做NULL</span></span><br><span class="line">        <span class="keyword">return</span> ll_rotate(N);</span><br><span class="line">    <span class="keyword">if</span>(balance&gt;<span class="number">1</span>&amp;&amp;Node_Balance(N-&gt;rchild)&lt;<span class="number">0</span>) <span class="comment">// LR</span></span><br><span class="line">        <span class="keyword">return</span> lr_rotate(N);</span><br><span class="line">    <span class="keyword">if</span>(balance&lt;<span class="number">-1</span>&amp;&amp;Node_Balance(N-&gt;rchild)&lt;=<span class="number">0</span>) <span class="comment">// RR</span></span><br><span class="line">        <span class="keyword">return</span> rr_rotate(N);</span><br><span class="line">    <span class="keyword">if</span>(balance&lt;<span class="number">-1</span>&amp;&amp;Node_Balance(N-&gt;rchild)&gt;<span class="number">0</span>) <span class="comment">// RL</span></span><br><span class="line">        <span class="keyword">return</span> rl_rotate(N);</span><br><span class="line">    <span class="keyword">return</span> N;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">node *<span class="title">Read_date</span><span class="params">(node *N,llint Rows)</span></span>&#123;</span><br><span class="line">    <span class="function">ifstream <span class="title">sout</span><span class="params">(<span class="string">"test.txt"</span>)</span></span>;</span><br><span class="line">    stuclass ans;</span><br><span class="line">    llint key;</span><br><span class="line">    <span class="keyword">for</span>(llint i = <span class="number">0</span>;i&lt;Rows;i++)&#123;</span><br><span class="line">        sout&gt;&gt;key&gt;&gt;ans.name&gt;&gt;ans.sex&gt;&gt;ans.pclass;</span><br><span class="line">        N = insert(N,key,ans);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> N;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    node *root = <span class="literal">NULL</span>;</span><br><span class="line">    Read_date(root,<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"前序:"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    preOrder(root);</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    node *root = NULL;</span></span><br><span class="line"><span class="comment">    root = insert(root, 2);</span></span><br><span class="line"><span class="comment">    root = insert(root, 1);</span></span><br><span class="line"><span class="comment">    root = insert(root, 0);</span></span><br><span class="line"><span class="comment">    root = insert(root, 3);</span></span><br><span class="line"><span class="comment">    root = insert(root, 4);</span></span><br><span class="line"><span class="comment">    root = insert(root, 4);</span></span><br><span class="line"><span class="comment">    root = insert(root, 5);</span></span><br><span class="line"><span class="comment">    root = insert(root, 6);</span></span><br><span class="line"><span class="comment">    root = insert(root, 9);</span></span><br><span class="line"><span class="comment">    root = insert(root, 8);</span></span><br><span class="line"><span class="comment">    root = insert(root, 7);</span></span><br><span class="line"><span class="comment">    printf("前序:");</span></span><br><span class="line"><span class="comment">    preOrder(root);</span></span><br><span class="line"><span class="comment">    printf("Del:3");</span></span><br><span class="line"><span class="comment">    DeleteNode(root,3);</span></span><br><span class="line"><span class="comment">    printf("前序:");</span></span><br><span class="line"><span class="comment">    preOrder(root);</span></span><br><span class="line"><span class="comment">    return 0;</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="test-txt文本"><a href="#test-txt文本" class="headerlink" title="test.txt文本"></a>test.txt文本</h3><blockquote>
+<p>201803010001    何肇原    男    计科18-1<br>201803010002    曾展庭    男    计科18-1<br>201803010003    叶宇    男    计科18-1<br>201803010004    梁宵    男    计科18-1<br>201803010005    程振华    男    计科18-1<br>201803010006    郭长齐    男    计科18-1<br>201803010007    李金泓    女    计科18-1<br>201803010008    冯利伟    男    计科18-1<br>201803010009    刘嘉诚    男    计科18-1<br>201803010010    王鹏    男    计科18-1<br>201803010011    王文硕    男    计科18-1<br>201803010012    唐美辰    女    计科18-1<br>201803010013    郭庆昱    男    计科18-1<br>201803010014    王宏宇    男    计科18-1<br>201803010015    王欢    男    计科18-1<br>201803010016    王英歌    女    计科18-1<br>201803010017    胡学斌    男    计科18-1<br>201803010018    魏斯博    男    计科18-1<br>201803010019    李鹏飞    男    计科18-1<br>201803010020    李廷帅    男    计科18-1<br>201803010021    邱威    男    计科18-1<br>201803010022    刘宇航    男    计科18-1<br>201803010023    李一凡    男    计科18-1<br>201803010024    王秋月    女    计科18-1<br>201803010025    刘越    男    计科18-1<br>201803010026    潘政林    男    计科18-1<br>201803010027    戴咏雪    女    计科18-1<br>201803010028    孙瑶瑶    女    计科18-1<br>201803010029    刘泽彬    男    计科18-1<br>201803010030    张云昊    男    计科18-1<br>201803010031    魏同心    男    计科18-1<br>201803010032    唐廉博    男    计科18-1<br>201803010033    冯朔    女    计科18-1<br>201803010034    李雨燕    女    计科18-1<br>201803010035    唐江龙    男    计科18-1<br>201803010036    石干    男    计科18-1<br>201803010037    张金铭    男    计科18-1<br>201803010038    董际磊    男    计科18-1<br>201803010039    颜景盈    男    计科18-1<br>201803010040    蔡晓洁    女    计科18-1<br>201803010041    刘文斌    男    计科18-2<br>201803010042    王新航    男    计科18-2<br>201803010043    皮诗雨    女    计科18-2<br>201803010044    龚雅琴    女    计科18-2<br>201803010045    李健    男    计科18-2<br>201803010046    刘兴家    男    计科18-2<br>201803010047    孙艺丹    女    计科18-2<br>201803010048    辛莘    男    计科18-2<br>201803010049    李家豪    男    计科18-2<br>201803010050    姜冲    男    计科18-2<br>201803010051    张文康    男    计科18-2<br>201803010052    唐志浩    男    计科18-2<br>201803010053    朱文卓    男    计科18-2<br>201803010054    葛利宾    男    计科18-2<br>201803010055    杨乐    男    计科18-2<br>201803010056    刘玉颖    女    计科18-2<br>201803010057    王丽萍    女    计科18-2<br>201803010058    于晓滨    男    计科18-2<br>201803010059    张建新    男    计科18-2<br>201803010060    孙文昊    男    计科18-2<br>201803010061    杜威霖    男    计科18-2<br>201803010062    沈泽东    男    计科18-2<br>201803010063    徐舒宁    女    计科18-2<br>201803010064    张昕    男    计科18-2<br>201803010065    王圣杰    男    计科18-2<br>201803010066    李昌通    男    计科18-2<br>201803010067    陈宇峰    男    计科18-2<br>201803010068    王浩    男    计科18-2<br>201803010069    韩仁冬    男    计科18-2<br>201803010070    赵宇    男    计科18-2<br>201803010071    戴煜    女    计科18-2<br>201803010072    王朔    男    计科18-2<br>201803010073    于震    男    计科18-2<br>201803010074    刘璐    女    计科18-2<br>201803010075    邱博伟    男    计科18-2<br>201803010076    张澳龙    男    计科18-2<br>201803010077    安宝龙    男    计科18-2<br>201803010078    刘夫阳    男    计科18-2<br>201803010079    马璐瑶    女    计科18-2<br>201803010080    熊娟    女    计科18-2</p>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果!<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/25/奇怪的链表/" class="archive-article-date">
-  	<time datetime="2019-09-25T15:22:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/25/奇怪的链表/">奇怪的链表</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -187,189 +227,128 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DateStructure</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">AVL</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/09/平衡二叉树-AVL-的简单实现/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/23/线性表初探/" class="archive-article-date">
-  	<time datetime="2019-09-23T15:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/18/Hash的基础应用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hash的基础应用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/23/线性表初探/">线性表初探</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">DateStruct</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AVL源码"><span class="toc-number">1.</span> <span class="toc-text">AVL源码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#LL型"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">LL型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RR型"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">RR型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#LR型"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">LR型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RL型"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">RL型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#test-txt文本"><span class="toc-number">1.1.</span> <span class="toc-text">test.txt文本</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/20/KMP算法/" class="archive-article-date">
-  	<time datetime="2019-09-20T13:32:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/20/KMP算法/">KMP算法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C++</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/19/格式test/" class="archive-article-date">
-  	<time datetime="2019-09-19T14:11:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/19/格式test/">格式test</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">rubbish</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">简单记忆</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">随时删除</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/19/hello-world/" class="archive-article-date">
-  	<time datetime="2019-09-19T10:45:47.617Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/19/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -393,8 +372,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
